@@ -18,8 +18,28 @@
         margin: 0 5px;
     }
 }
+.title {
+    font-size: 38px;
+    text-transform: uppercase;
+}
 .primary-title {
     font-family: 'Pacifico', cursive;
+    font-size: 30px;
+}
+.btn {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    background-color: #e7a331;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 40px;
+    transition: .2s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    }
 }
 
 /* ===================
@@ -127,6 +147,7 @@
                         }
                     }
                     .booking-btn {
+                        text-transform: capitalize;
                         color: #e7a331;
                         background-color: transparent;
                         border: 1px solid #fff;
@@ -162,6 +183,7 @@
                 font-size: 25px;
             }
             .home-main-btn {
+                text-transform: capitalize;
                 color: #fff;
                 font-size: 20px;
                 background-color: transparent;
@@ -170,11 +192,12 @@
                 padding: 13px 30px;
                 font-family: 'Times New Roman', Times, serif;
                 transition: background-color .3s ease-in-out;
-                transition: color .3s ease-in-out;
+                transition: .3s ease-in-out;
 
                 &:hover {
                     background-color: #fff;
                     color: #e7a331;
+                    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
                     cursor: pointer;
                 }
             }
@@ -400,5 +423,67 @@
 @media (min-height: 800px) {
     .section-home .home-content {
         height: 800px;
+    }
+}
+
+/* ==================
+    ABOUT SECTION
+===================== */
+
+.section-about {
+    background: url(./images/about-background.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &-content {
+        display: flex;
+        padding: 115px 0 175px;
+
+        .restaurant-photos {
+            position: relative;
+            margin: 15px 60px 0 50px;
+    
+            .photo-container {
+                width: 350px;
+                height: 290px;
+                border: 10px solid #fff;
+                box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.75);
+    
+                img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                }
+                &:nth-child(1) {
+                    position: relative;
+                    z-index: 2;
+                }
+                &:nth-child(2) {
+                    z-index: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: rotate(-9deg) translate(-21px, -3px);
+                }
+            }
+        }
+        .about-description {
+            .title {
+                padding: 15px 0;
+            }
+            p {
+                font-size: 15px;
+                color: #4a4a4a;
+                padding: 10px 10px 10px 0;
+            }
+            .btn {
+                margin: 30px 0;
+            }
+        }
+    }
+    .parsley-image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 }
