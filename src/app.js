@@ -1,3 +1,5 @@
+import './styles.scss';
+
 const burgerMenuButton = document.getElementById('burgerMenuButton');
 const navBar = document.getElementById('navBar');
 
